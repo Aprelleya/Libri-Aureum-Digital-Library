@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaksi - Libri Aureum Digital Library</title>
+    <link rel="stylesheet" href="style4.css">
+</head>
+<body class="gradient-box">
+    <header>
+        <img src="logo perpus.png" alt="Logo" class="logo">
+        <h1>Libri Aureum Digital Library</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="daftar_buku.html">Koleksi Buku</a></li>
+            <li><a href="transaksi.html">Peminjaman</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="gradient-box">
+            <h2>Transaksi Peminjaman Buku</h2>
+            <form id="transaksiForm" class="form-gradient">
+                <div class="form-group">
+                    <label for="nama">Nama Peminjam:</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama peminjam" required>
+                </div>
+                <div class="form-group">
+                    <label for="judul">Judul Buku:</label>
+                    <input type="text" id="judul" name="judul" placeholder="Masukkan judul buku" required>
+                </div>
+                <div class="form-group">
+                    <label for="tanggal-pinjam">Tanggal Peminjaman:</label>
+                    <input type="date" id="tanggal-pinjam" name="tanggal-pinjam" required>
+                </div>
+                <div class="form-group">
+                    <label for="tanggal-kembali">Tanggal Pengembalian:</label>
+                    <input type="date" id="tanggal-kembali" name="tanggal-kembali" required>
+                </div>
+                <div class="form-actions">
+                    <button type="submit">Simpan</button>
+                    <button type="reset" class="reset-button">Reset</button>
+                </div>
+            </form>
+            <br>
+            <a href="daftar_transaksi.html" class="link">Lihat Daftar Transaksi</a>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Libri Aureum Digital Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Tangkap elemen form berdasarkan ID
+        const form = document.getElementById("transaksiForm");
+    
+        // Tambahkan event listener untuk menangani event submit
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Mencegah halaman reload
+    
+            // Ambil nilai dari input di form
+            const nama = document.getElementById("nama").value.trim();
+            const judul = document.getElementById("judul").value.trim();
+            const tanggalPinjam = document.getElementById("tanggal-pinjam").value;
+            const tanggalKembali = document.getElementById("tanggal-kembali").value;
+    
+            // Validasi tanggal pengembalian
+            if (new Date(tanggalKembali) <= new Date(tanggalPinjam)) {
+                alert("Tanggal pengembalian harus lebih besar dari tanggal peminjaman!");
+                return; // Menghentikan eksekusi jika validasi gagal
+            }
+    
+            // Simpan data ke localStorage
+            const transaksi = { nama, judul, tanggalPinjam, tanggalKembali };
+            let daftarTransaksi = JSON.parse(localStorage.getItem("daftarTransaksi")) || [];
+            daftarTransaksi.push(transaksi);
+            localStorage.setItem("daftarTransaksi", JSON.stringify(daftarTransaksi));
+    
+            // Tampilkan notifikasi sukses
+            alert("Transaksi berhasil disimpan!");
+    
+            // Reset form
+            form.reset();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Transaksi - Libri Aureum Digital Library</title>
+    <link rel="stylesheet" href="style8.css">
+</head>
+<body class="gradient-box">
+    <header>
+        <img src="logo perpus.png" alt="Logo" class="logo">
+        <h1>Libri Aureum Digital Library</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="beranda.html">Beranda</a></li>
+            <li><a href="profil.html">Profil</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="daftar_buku.html">Koleksi Buku</a></li>
+            <li><a href="transaksi.html">Peminjaman</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="table-container">
+            <h2>Daftar Transaksi</h2>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Libri Aureum Digital Library. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const transaksiContainer = document.querySelector("main .table-container");
+
+            // Ambil data transaksi dari localStorage
+            const daftarTransaksi = JSON.parse(localStorage.getItem("daftarTransaksi")) || [];
+
+            if (daftarTransaksi.length === 0) {
+                transaksiContainer.innerHTML += "<p>Tidak ada transaksi yang tersedia.</p>";
+                return;
+            }
+
+            // Buat tabel untuk menampilkan transaksi
+            let tableHTML = `
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nama Peminjam</th>
+                            <th>Judul Buku</th>
+                            <th>Tanggal Peminjaman</th>
+                            <th>Tanggal Pengembalian</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+            `;
+
+            daftarTransaksi.forEach((transaksi) => {
+                tableHTML += `
+                    <tr>
+                        <td>${transaksi.nama}</td>
+                        <td>${transaksi.judul}</td>
+                        <td>${transaksi.tanggalPinjam}</td>
+                        <td>${transaksi.tanggalKembali}</td>
+                    </tr>
+                `;
+            });
+
+            tableHTML += "</tbody></table>";
+            transaksiContainer.innerHTML += tableHTML;
+        });
+    </script>
+</body>
+</html>

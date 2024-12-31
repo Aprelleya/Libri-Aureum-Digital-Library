@@ -1,0 +1,195 @@
+@font-face {
+    font-family: 'Waden';
+    src: url('fonts/Waden.ttf') format('truetype'); /* Pastikan path file benar */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Styling untuk kotak dengan gradasi */
+.gradient-box {
+    background: linear-gradient(135deg, #f2e4c4, #c2a77b, #f2d7c2); /* Warna gradasi */
+    border-radius: 15px; /* Membulatkan sudut */
+    padding: 20px; /* Ruang di dalam kotak */
+    margin: 20px auto; /* Ruang di luar kotak */
+    width: 90%; /* Lebar kotak */
+    max-width: 1200px; /* Batas lebar maksimum */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+}
+
+/* Styling umum untuk body dan teks */
+body {
+    font-family: 'Waden', serif; /* Font utama */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+    background-color: #f2e4c4; /* Warna latar belakang krem lembut */
+    color: #5c492f; /* Warna teks cokelat gelap */
+}
+
+/* Styling untuk header */
+header {
+    background-color: #5a361a; /* Warna latar belakang cokelat tua */
+    color: #f1e0b6; /* Warna teks krem terang */
+    padding: 30px 20px; /* Padding di sekitar konten header */
+    text-align: center; /* Teks rata tengah */
+}
+
+header img {
+    width: 60px; /* Ukuran gambar logo */
+    vertical-align: middle; /* Menyesuaikan posisi vertikal gambar */
+    margin-right: 15px; /* Memberi jarak dengan teks */
+}
+
+h1 {
+    font-size: 3em; /* Ukuran teks besar */
+    margin: 0; /* Menghapus margin default */
+    font-weight: bold; /* Teks tebal */
+    letter-spacing: 3px; /* Spasi antar huruf */
+}
+
+/* Styling untuk navigasi */
+nav {
+    background-color: #795130; /* Warna latar belakang navigasi */
+    text-align: center; /* Teks rata tengah */
+    padding: 15px 0; /* Padding di dalam navigasi */
+}
+
+nav ul {
+    list-style-type: none; /* Menghapus bullet pada daftar */
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline; /* Elemen daftar horizontal */
+    margin: 0 15px; /* Jarak antar elemen */
+}
+
+nav ul li a {
+    font-family: 'Waden', serif; /* Font utama */
+    color: #eccfad; /* Warna teks krem */
+    font-size: 1.1em; /* Ukuran teks */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-weight: bold; /* Teks tebal */
+    letter-spacing: 1px; /* Spasi antar huruf */
+    padding: 10px 20px; /* Padding dalam tombol */
+    border-radius: 5px; /* Membulatkan sudut tombol */
+    transition: background-color 0.3s; /* Animasi perubahan warna latar */
+}
+
+nav ul li a:hover {
+    background-color: #8a5d3b; /* Warna latar saat di-hover */
+    color: #ffffff; /* Warna teks saat di-hover */
+}
+
+/* Styling untuk konten utama */
+main {
+    padding: 40px 20px; /* Padding untuk konten utama */
+}
+
+/* Styling untuk bagian selamat datang */
+section h2 {
+    font-family: 'Waden', serif; /* Font utama */
+    font-size: 2.5em; /* Ukuran teks */
+    color: #70370c; /* Warna teks cokelat gelap */
+    text-align: center; /* Teks rata tengah */
+    margin-bottom: 20px; /* Jarak bawah teks */
+}
+
+/* Styling untuk footer */
+footer {
+    background-color: #8a5d3b; /* Warna latar belakang footer */
+    color: #f1e0b6; /* Warna teks krem terang */
+    padding: 15px 0; /* Padding dalam footer */
+    text-align: center; /* Teks rata tengah */
+    font-size: 0.9em; /* Ukuran teks kecil */
+    letter-spacing: 1px; /* Spasi antar huruf */
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk layar kecil (ponsel) */
+@media (max-width: 768px) {
+    header {
+        padding: 20px 10px; /* Padding lebih kecil */
+    }
+
+    header img {
+        width: 40px; /* Ukuran logo lebih kecil */
+    }
+
+    h1 {
+        font-size: 2em; /* Ukuran teks lebih kecil */
+    }
+
+    nav ul li {
+        display: block; /* Navigasi vertikal */
+        margin: 10px 0; /* Jarak antar elemen */
+    }
+
+    nav ul li a {
+        font-size: 1em; /* Ukuran teks lebih kecil */
+        padding: 8px 15px; /* Padding lebih kecil */
+    }
+
+    .gradient-box {
+        padding: 15px; /* Padding lebih kecil */
+        width: 95%; /* Lebar hampir penuh */
+    }
+
+    section h2 {
+        font-size: 2em; /* Ukuran teks lebih kecil */
+    }
+
+    footer {
+        font-size: 0.8em; /* Ukuran teks footer lebih kecil */
+    }
+}
+
+/* Untuk layar sedang (tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        padding: 25px 15px; /* Padding sedang */
+    }
+
+    nav ul li a {
+        font-size: 1.1em; /* Ukuran teks tetap */
+        padding: 10px 18px; /* Padding sedang */
+    }
+
+    .gradient-box {
+        padding: 20px; /* Padding sedang */
+        width: 85%; /* Lebar lebih kecil dari desktop */
+    }
+
+    section h2 {
+        font-size: 2.2em; /* Ukuran teks sedang */
+    }
+}
+
+/* Untuk layar besar (desktop) */
+@media (min-width: 1025px) {
+    header {
+        padding: 30px 20px; /* Padding default */
+    }
+
+    h1 {
+        font-size: 3em; /* Ukuran teks default */
+    }
+
+    nav ul li a {
+        font-size: 1.2em; /* Ukuran teks lebih besar */
+        padding: 12px 25px; /* Padding lebih besar */
+    }
+
+    .gradient-box {
+        max-width: 1200px; /* Lebar maksimum */
+    }
+
+    section h2 {
+        font-size: 2.5em; /* Ukuran teks default */
+    }
+
+    footer {
+        font-size: 0.9em; /* Ukuran teks footer default */
+    }
+}

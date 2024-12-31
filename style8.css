@@ -1,0 +1,346 @@
+@font-face {
+    font-family: 'Waden';
+    src: url('fonts/Waden.ttf') format('truetype'); /* Pastikan path file benar */
+    font-weight: normal;
+    font-style: normal;
+}
+/* ===== Gradient Box Styling ===== */
+.gradient-box {
+    background: linear-gradient(135deg, #f2e4c4, #c2a77b, #967c68);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* ===== Gradient Styling for Body ===== */
+body {
+    font-family: 'Waden', serif;
+    margin: 100;
+    padding: 50;
+    background: linear-gradient(135deg, #f2e4c4, #c2a77b, #cfc1b6); /* Gradient background */
+    color: #4f4a43;
+}
+
+/* ===== Header Styling ===== */
+header {
+    background-color: #5a361a;
+    color: #f1e0b6;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header img {
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+/* ===== Navigation Styling ===== */
+nav {
+    background-color: #795130;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    font-family: 'Waden', serif;
+    color: #eccfad;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #8a5d3b;
+    color: #ffffff;
+}
+
+/* ===== Main Content ===== */
+main {
+    padding: 60px 60px;
+}
+
+/* ===== Welcome Section ===== */
+section h2 {
+    font-family: 'Waden', serif;
+    font-size: 2.5em;
+    color: #70370c;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ===== Form Gradient Styling ===== */
+.form-gradient {
+    background: linear-gradient(135deg, #ffffff, #f7f2e6);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    border: 5px solid #cfc1b6;
+}
+
+/* ===== Form Group ===== */
+.form-group {
+    margin-bottom: 60px;
+}
+
+/* ===== Label Styling ===== */
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #70370c;
+}
+
+/* ===== Input Fields Styling ===== */
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cfc1b6;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #f7f2e6;
+    transition: border 0.3s ease;
+}
+
+/* ===== Input Focus Effect ===== */
+.form-group input:focus {
+    border-color: #c2a77b;
+    outline: none;
+}
+
+/* ===== Button Styling ===== */
+.form-actions button {
+    background: #c2a77b;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 10px;
+    font-size: 1em;
+}
+
+.form-actions button:hover {
+    background: #8a5d3b;
+}
+
+.reset-button {
+    background: #d6c6a1;
+}
+
+.reset-button:hover {
+    background: #a8a390;
+}
+
+/* ===== Table Styling ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    color: #4f4a43;
+    background-color: #523625;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(193, 138, 106, 0.2);
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid #47372c;
+    text-align: left;
+}
+
+/* ===== Header Tabel dengan Gradasi ===== */
+table th {
+    background: linear-gradient(135deg, #805f40, #8a6b4f);
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #e3cfbf;
+}
+
+/* ===== Baris dengan Efek Gradasi ===== */
+table tr:nth-child(odd) {
+    background: linear-gradient(135deg, #ffffff, #f9f7f5);
+}
+
+table tr:nth-child(even) {
+    background: linear-gradient(135deg, #f2e4c4, #d8c2b4);
+}
+
+/* ===== Hover Effect untuk Baris ===== */
+table tr:hover {
+    background: linear-gradient(135deg, #f7e4d2, #c2a77b);
+    color: #70370c;
+    cursor: pointer;
+}
+
+/* ===== Efek Transisi ===== */
+table th, table td {
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* ===== Footer Styling ===== */
+footer {
+    background-color: #8a5d3b;
+    color: #f1e0b6;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    letter-spacing: 1px;
+}
+/* Media Queries */
+
+/* Perangkat Kecil (max-width: 768px) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Ukuran lebih kecil untuk layar kecil */
+    }
+
+    nav ul li {
+        display: block; /* Navigasi vertikal */
+        margin: 10px 0;
+    }
+
+    nav ul {
+        padding: 10px 0;
+    }
+
+    .gradient-box {
+        padding: 15px; /* Padding lebih kecil */
+        width: 95%; /* Lebar lebih kecil */
+    }
+
+    main {
+        padding: 20px; /* Kurangi padding */
+    }
+
+    section h2 {
+        font-size: 2em; /* Ukuran lebih kecil */
+    }
+
+    .form-gradient {
+        padding: 20px; /* Kurangi padding */
+        margin: 10px auto;
+    }
+
+    .form-group input {
+        padding: 10px; /* Kurangi padding */
+    }
+
+    table {
+        font-size: 14px; /* Ukuran font lebih kecil */
+    }
+
+    table th, table td {
+        padding: 8px 10px; /* Padding lebih kecil */
+    }
+
+    table {
+        display: block;
+        overflow-x: auto; /* Scroll horizontal untuk tabel */
+    }
+}
+
+/* Perangkat Sedang (min-width: 769px dan max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Margin lebih kecil antar item navigasi */
+    }
+
+    .gradient-box {
+        max-width: 95%; /* Lebar sedikit lebih kecil */
+        padding: 20px;
+    }
+
+    .form-gradient {
+        max-width: 80%; /* Atur ukuran sesuai */
+        padding: 25px;
+    }
+
+    table th, table td {
+        padding: 10px 12px; /* Kurangi padding sedikit */
+    }
+}
+
+/* Perangkat Besar (Desktop) */
+@media (min-width: 1025px) {
+    header h1 {
+        font-size: 3em;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    .gradient-box {
+        max-width: 1200px;
+        padding: 30px;
+    }
+
+    .form-gradient {
+        max-width: 50%; /* Tetap proporsional */
+        margin: 20px auto;
+        padding: 30px;
+    }
+}
+
+/* Tabel Responsif */
+@media (max-width: 768px) {
+    table thead {
+        display: none; /* Sembunyikan header tabel di layar kecil */
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px; /* Ruang antar baris */
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%; /* Tempat untuk label */
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label); /* Data label */
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #70370c;
+    }
+}
+ 

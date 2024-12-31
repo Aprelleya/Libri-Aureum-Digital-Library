@@ -1,0 +1,211 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2e4c4;
+    color: #4f4a43;
+}
+
+/* Header */
+header {
+    background-color: #5a361a;
+    color: #f1e0b6;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Navigation */
+nav {
+    background-color: #795130;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #eccfad;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #8a5d3b;
+    color: #ffffff;
+}
+
+/* Gradient Box */
+.gradient-box {
+    background: linear-gradient(135deg, #f2e4c4, #c2a77b, #cfc1b6);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Table Styles */
+.table-container {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.table-container h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #70370c;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table thead tr {
+    background-color: #c2a77b;
+    color: #ffffff;
+    text-align: left;
+}
+
+table th, table td {
+    padding: 12px;
+    border: 1px solid #cfc1b6;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f7f2e6;
+}
+
+table tbody tr:hover {
+    background-color: #cfc1b6;
+}
+
+table td {
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #8a5d3b;
+    color: #f1e0b6;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+/* Media Queries */
+
+/* Perangkat Kecil (Ponsel) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em; /* Ukuran teks lebih kecil */
+    }
+
+    nav ul li {
+        display: block; /* Navigasi vertikal */
+        margin: 10px 0;
+    }
+
+    .gradient-box {
+        padding: 15px; /* Padding lebih kecil */
+    }
+
+    .table-container {
+        padding: 15px; /* Padding lebih kecil */
+        margin: 10px auto; /* Margin lebih kecil */
+        max-width: 100%; /* Lebar penuh */
+        box-shadow: none; /* Hilangkan bayangan untuk kesederhanaan */
+    }
+
+    table thead {
+        display: none; /* Sembunyikan header tabel di layar kecil */
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+    }
+
+    table td {
+        text-align: left; /* Atur teks ke kiri */
+        padding-left: 50%; /* Tempat untuk label */
+        position: relative;
+    }
+
+    table td::before {
+        content: attr(data-label); /* Ambil data label dari atribut */
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #70370c;
+    }
+}
+
+/* Perangkat Sedang (Tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Jarak lebih kecil antar item navigasi */
+    }
+
+    .table-container {
+        max-width: 90%; /* Lebar lebih kecil dari desktop */
+    }
+
+    table th, table td {
+        padding: 10px; /* Padding lebih kecil */
+    }
+}
+
+/* Perangkat Besar (Desktop) */
+@media (min-width: 1025px) {
+    header h1 {
+        font-size: 2.5em; /* Ukuran teks default */
+    }
+
+    nav ul li {
+        margin: 0 20px; /* Margin default */
+    }
+
+    .table-container {
+        max-width: 900px; /* Lebar default */
+    }
+
+    table th, table td {
+        padding: 12px; /* Padding default */
+    }
+}

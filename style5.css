@@ -1,0 +1,224 @@
+@font-face {
+    font-family: 'Waden';
+    src: url('fonts/Waden.ttf') format('truetype'); /* Pastikan path file benar */
+    font-weight: normal;
+    font-style: normal;
+}
+/* Gradient Box Styling */
+.gradient-box {
+    background: linear-gradient(135deg, #f2e4c4, #c2a77b, #f2d7c2); /* Warna gradasi */
+    border-radius: 15px; /* Membulatkan sudut */
+    padding: 20px; /* Padding untuk ruang di dalam box */
+    margin: 20px auto; /* Ruang luar box */
+    width: 90%; /* Lebar maksimal */
+    max-width: 1200px; /* Batas lebar */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Efek bayangan 
+
+/* Global Styles */
+
+}
+.body {
+    font-family: Waden, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2e4c4; /* Soft cream */
+    color: #4f4a43; /* Dark brown */
+}
+
+/* Header */
+header {
+    background-color: #5a361a; /* Deep brown */
+    color: #f1e0b6; /* Light beige */
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav {
+    background-color: #795130;
+    text-align: center;
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #eccfad;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #8a5d3b;
+    color: #ffffff;
+}
+
+/* Gradient Box */
+.gradient-box {
+    background: linear-gradient(135deg, #f2e4c4, #c2a77b, #cfc1b6);
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Form Container */
+.form-container {
+    background: linear-gradient(135deg, #ffffff, #f7f2e6); /* Gradasi sesuai tema */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 400px;
+    margin: 40px auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid #cfc1b6;
+}
+
+.form-container h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #70370c;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #70370c;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cfc1b6;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #f7f2e6;
+    transition: border 0.3s ease;
+}
+
+.form-container input:focus {
+    border-color: #c2a77b;
+    outline: none;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    background: #c2a77b;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container button:hover {
+    background: #8a5d3b;
+}
+
+/* Footer */
+footer {
+    background-color: #8a5d3b;
+    color: #f1e0b6;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
+/* Media Queries */
+
+/* Untuk perangkat kecil (ponsel) */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em; /* Ukuran teks lebih kecil */
+    }
+
+    nav ul li {
+        display: block; /* Navigasi vertikal */
+        margin: 10px 0;
+    }
+
+    .gradient-box {
+        padding: 15px; /* Padding lebih kecil */
+    }
+
+    .form-container {
+        padding: 20px; /* Padding lebih kecil */
+        width: 90%; /* Lebar lebih sesuai untuk layar kecil */
+        margin: 20px auto; /* Margin menyesuaikan */
+    }
+
+    footer {
+        font-size: 0.8em; /* Ukuran teks lebih kecil */
+    }
+}
+
+/* Untuk perangkat sedang (tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 2.2em; /* Ukuran teks menengah */
+    }
+
+    .gradient-box {
+        width: 85%; /* Lebar lebih sesuai untuk tablet */
+        margin: 20px auto;
+    }
+
+    .form-container {
+        width: 70%; /* Form lebih lebar di tablet */
+    }
+
+    nav ul li {
+        margin: 0 10px; /* Margin lebih kecil antar item navigasi */
+    }
+}
+
+/* Untuk perangkat besar (desktop) */
+@media (min-width: 1025px) {
+    header h1 {
+        font-size: 2.5em; /* Ukuran teks default */
+    }
+
+    .gradient-box {
+        width: 90%; /* Lebar default */
+    }
+
+    .form-container {
+        max-width: 400px; /* Form lebih sempit untuk desktop */
+        margin: 40px auto;
+    }
+
+    nav ul li {
+        margin: 0 20px; /* Margin default antar navigasi */
+    }
+
+    footer {
+        font-size: 0.9em; /* Ukuran teks default di footer */
+    }
+}

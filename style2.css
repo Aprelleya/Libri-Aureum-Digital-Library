@@ -1,0 +1,143 @@
+body {
+    font-family: 'Georgia', serif; /* Font keluarga Georgia */
+    background-color: #f5f5dc; /* Warna latar belakang beige */
+    color: #4b2e2e; /* Warna teks cokelat gelap */
+    margin: 0; /* Menghapus margin default */
+    padding: 0; /* Menghapus padding default */
+}
+
+header {
+    background-color: #8b4513; /* Warna header SaddleBrown */
+    padding: 20px; /* Padding header */
+    text-align: center; /* Teks rata tengah */
+    display: flex; /* Menggunakan Flexbox */
+    align-items: center; /* Menyelaraskan elemen secara vertikal */
+    justify-content: center; /* Menyelaraskan elemen secara horizontal */
+}
+
+header .logo {
+    width: 50px; /* Lebar logo */
+    height: 50px; /* Tinggi logo */
+    margin-right: 20px; /* Jarak logo dengan teks */
+}
+
+header h1 {
+    margin: 0; /* Menghapus margin default */
+    color: #fff; /* Warna teks putih */
+    font-size: 36px; /* Ukuran teks */
+}
+
+nav {
+    background-color: #a0522d; /* Warna navigasi Sienna */
+    padding: 10px; /* Padding untuk navigasi */
+    text-align: center; /* Teks rata tengah */
+}
+
+nav ul {
+    list-style-type: none; /* Menghapus bullet */
+    padding: 0; /* Menghapus padding default */
+}
+
+nav ul li {
+    display: inline; /* Daftar horizontal */
+    margin: 0 15px; /* Jarak antar item navigasi */
+}
+
+nav ul li a {
+    color: #fff; /* Warna teks putih */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-size: 18px; /* Ukuran teks */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* Garis bawah saat hover */
+}
+
+main {
+    padding: 20px; /* Padding untuk konten utama */
+}
+
+section {
+    margin-bottom: 20px; /* Jarak antar section */
+}
+
+footer {
+    background-color: #8b4513; /* Warna footer SaddleBrown */
+    padding: 10px; /* Padding footer */
+    text-align: center; /* Teks rata tengah */
+    color: #fff; /* Warna teks putih */
+    position: fixed; /* Tetap di bawah halaman */
+    bottom: 0; /* Posisi di bagian bawah */
+    width: 100%; /* Lebar penuh */
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Untuk layar kecil (ponsel) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Menumpuk elemen header secara vertikal */
+        padding: 15px; /* Padding lebih kecil */
+    }
+
+    header .logo {
+        margin-right: 0; /* Menghapus jarak logo */
+        margin-bottom: 10px; /* Menambahkan jarak bawah */
+    }
+
+    header h1 {
+        font-size: 24px; /* Ukuran teks lebih kecil */
+    }
+
+    nav ul li {
+        display: block; /* Navigasi vertikal */
+        margin: 10px 0; /* Jarak antar item */
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Ukuran teks lebih kecil */
+    }
+
+    footer {
+        font-size: 12px; /* Ukuran teks lebih kecil */
+    }
+}
+
+/* Untuk layar sedang (tablet) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    header {
+        flex-direction: row; /* Elemen tetap horizontal */
+        padding: 20px; /* Padding standar */
+    }
+
+    header h1 {
+        font-size: 30px; /* Ukuran teks menengah */
+    }
+
+    nav ul li a {
+        font-size: 17px; /* Ukuran teks menengah */
+    }
+
+    footer {
+        font-size: 14px; /* Ukuran teks menengah */
+    }
+}
+
+/* Untuk layar besar (desktop) */
+@media (min-width: 1025px) {
+    header {
+        padding: 25px; /* Padding lebih besar */
+    }
+
+    header h1 {
+        font-size: 36px; /* Ukuran teks besar */
+    }
+
+    nav ul li a {
+        font-size: 18px; /* Ukuran teks standar */
+    }
+
+    footer {
+        font-size: 16px; /* Ukuran teks standar */
+    }
+}
